@@ -1,0 +1,382 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Dashboard Container: Full Viewport with Grid Layout */
+  .dashboard {
+    display: grid;
+    grid-template-rows: auto 1fr; /* header takes natural height; main-content fills remaining space */
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Inner Container for Centered Content */
+  .inner-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Header & Navigation */
+  .header {
+    background-color: #003366;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .nav button:hover,
+  .nav button.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
+  
+  /* Main Content Area: Fill Remaining Viewport Height */
+  .main-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: #fff;
+    /* Remove extra margin so it truly fills remaining space */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  /* Orders Page */
+  .orders-page {
+    padding: 20px;
+  }
+  
+  .order-tabs {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .order-tabs button {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #003366;
+    background: #fff;
+    color: #003366;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease, color 0.3s ease;
+  }
+  
+  .order-tabs button.active,
+  .order-tabs button:hover {
+    background: #003366;
+    color: #fff;
+  }
+  
+  /* Order Cards Container */
+  .orders-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Order Card */
+  .order-card {
+    flex: 1 1 calc(25% - 20px);
+    background: #fdfdfd;
+    border: 1px solid #004992;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    overflow: hidden;
+  }
+  
+  .order-info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    background-color: #004992;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .order-items {
+    padding: 15px;
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .order-item-detail {
+    font-size: 1.25rem;
+    color: #555;
+  }
+  
+  .order-actions {
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Menu Items Page */
+  .menu-page {
+    padding: 20px;
+    max-width: 500px;
+    border: 3px solid #004992;
+    border-radius: 20px;
+    margin: auto;
+    width: 50%;
+  }
+  
+  .menu-page h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group input {
+    background-color: #ffffff;
+    color: #000;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+  }
+  
+  .menu-items-list {
+    list-style: none;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+  }
+  
+  .item-actions button {
+    margin-left: 10px;
+  }
+  
+  /* About Page */
+  .about-page {
+    padding: 20px;
+  }
+  
+  .about-page h2 {
+    margin-bottom: 10px;
+  }
+  
+  .about-page p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .team-list {
+    list-style: none;
+  }
+  
+  .team-list li {
+    margin-bottom: 10px;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .btn.primary {
+    color:#ffffff;
+    background: #0080ff;
+    border: 2px solid #ffffff;
+  }
+  .btn.primary:hover {
+    background: #ffffff;
+    color:#0080ff;
+    border: 2px solid #0080ff;
+  }
+  
+  .btn.edit {
+    background: #015dba;
+    color: #fff;;
+  }
+  
+  .btn.edit:hover {
+    background: #004992;
+    color: #fff;
+  }
+  
+  .btn.delete {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  .btn.delete:hover {
+    background: #c82333;
+  }
+  
+  .btn.accept {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .btn.accept:hover {
+    background: #218838;
+  }
+  
+  .btn.reject {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  .btn.reject:hover {
+    background: #c82333;
+  }
+  
+  .btn.ready {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .btn.ready:hover {
+    background: #0056b3;
+  }
+  
+  /* Empty State */
+  .empty {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+  }
+  
+
+
+  /* Guide Section */
+.guide-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #004e9b;
+  color: #fff;
+  padding: 25px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.25);
+}
+
+.guide-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.guide-info div {
+  text-align: left;
+}
+
+/* Team Members Section */
+.team-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.1);
+}
+
+.team-member img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.team-member div {
+  text-align: left;
+}
+
+.team-member h4 {
+  margin-bottom: 5px;
+  color: #003366;
+}
+
+.team-member p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.team-member a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.team-member a:hover {
+  color: #0056b3;
+}
